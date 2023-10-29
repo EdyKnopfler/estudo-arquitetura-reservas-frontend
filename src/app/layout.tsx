@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
-import './globals.css'
+import './globals.scss'
 
 const barlowFont = Barlow({ subsets: ['latin'], weight: ['400', '700'] })
 
