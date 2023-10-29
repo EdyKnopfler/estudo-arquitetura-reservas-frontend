@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
-import './globals.scss'
+import styles from './globals.scss'
 
 const barlowFont = Barlow({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={barlowFont.className}>{children}</body>
+      <body className={`${barlowFont.className} ${styles.pageArea}`}>
+        
+        {children}
+      </body>
     </html>
   )
 }
