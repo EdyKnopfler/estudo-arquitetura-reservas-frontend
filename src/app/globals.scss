@@ -1,87 +1,83 @@
 * {
-    margin: 0;
-  }
-  
-  body {
-    margin: 1em;
-  }
-  
-  h1 {
-    margin-bottom: 1em;
-  }
-  
-  h2, h3, h4, h5, h6, p {
-    margin-bottom: 0.5em;
-  }
-  
-  h3 {
-    text-align: center;
-    background: wheat;
-    color: #C00;
-    padding: 0.5em;
-  }
-  
-  h4 {
-    background: #CCC;
-    padding: 0.3em;
-  }
-  
-  .clearFix::after {
-    content: ' ';
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h2, h3, h4, h5, h6, p {
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  text-align: center;
+  background: wheat;
+  color: #C00;
+  padding: 0.5em;
+}
+
+h4 {
+  background: #CCC;
+  padding: 0.3em;
+}
+
+.clearFix::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.formDiv {
+  margin: 0 auto;
+  width: 60%;
+
+  label {
     display: block;
-    clear: both;
-  }
-  
-  .formDiv {
-    margin: 0 auto;
-    width: 60%;
-  
-    label {
+    margin-bottom: 1em;
+
+    span {
       display: block;
-      margin-bottom: 1em;
-  
-      span {
-        display: block;
-        margin-bottom: 0.3em;
-      }
-  
-      input {
-        display: block;
-        width: 100%;
-        border: 1px solid #AAA;
-        font-size: 1em;
-        padding: 0.3em;
-      }
+      margin-bottom: 0.3em;
     }
-  
-    .buttonsDiv {
-      text-align: center;
-  
-      button {
-        border: 0px;
-        border-radius: 0;
-        font-size: 0.9em;
-        padding: 0.5em 1.5em;
-        color: white;
-        background: rgb(19, 19, 129);
-        font-weight: bold;
-        cursor: pointer;
-      }
-  
-      button:hover {
-        background: rgb(53, 53, 194)
-      }
-  
-      button:disabled {
-        background: rgb(189 189 249)
-      }
+
+    input {
+      display: block;
+      width: 100%;
+      border: 1px solid #AAA;
+      font-size: 1em;
+      padding: 0.3em;
     }
   }
-  
-  .pageArea {
-  
-    section {
-      position: relative;
+
+  .buttonsDiv {
+    text-align: center;
+
+    button {
+      border: 0px;
+      border-radius: 0;
+      font-size: 0.9em;
+      padding: 0.5em 1.5em;
+      color: white;
+      background: rgb(19, 19, 129);
+      font-weight: bold;
+      cursor: pointer;
     }
-  
+
+    button:hover {
+      background: rgb(53, 53, 194)
+    }
+
+    button:disabled {
+      background: rgb(189 189 249)
+    }
   }
+}
+
+.pageArea {
+
+  section {
+    position: relative;
+  }
+
+}
