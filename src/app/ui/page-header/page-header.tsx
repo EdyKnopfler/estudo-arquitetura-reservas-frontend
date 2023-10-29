@@ -1,20 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
-//import { slide as Menu } from 'react-burger-menu';
-
+import HamburgerMenu from './hamburger-menu';
 import './page-header.scss';
 
 export default function PageHeader() {
   return (
     <>
       <header className="PageHeader">
-        <div>  {/* Menu */}
-          Nome do usuário
-          <Link href="/logout">Sair</Link>
-        </div>
+        <HamburgerMenu />
         <h1>Faça sua reserva!</h1>
       </header>
-      
     </>
   )
 }
