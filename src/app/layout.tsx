@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 import styles from './globals.scss'
 import PageHeader from './ui/page-header/page-header'
+import StepNavigator from './ui/step-navigator/step-navigator'
 
 const barlowFont = Barlow({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${barlowFont.className} ${styles.pageArea}`}>
         <PageHeader />
+        <StepNavigator />
         <section>
           {children}
         </section>
