@@ -1,11 +1,14 @@
 .destinationSection {
   margin-bottom: 1.5em;
+  /*
   border: 1px solid #BBB;
   border-radius: 10px;
+  */
   padding: 1em;
+  background: #F0F0F0;
 
   img {
-    width: 50%;
+    width: 70%;
     height: auto;
     display: block;
     margin: auto;
@@ -17,11 +20,11 @@
   .destinationSection {
     .textContent {
       float: left;
-      width: 50%;
+      width: 45%;
     }
 
     img {
-      width: 25%;
+      width: 50%;
       float: right;
     }
   }
