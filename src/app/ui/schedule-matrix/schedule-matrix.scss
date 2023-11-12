@@ -13,9 +13,11 @@
 
   td.unavailable {
     background: rgb(255, 177, 177);
+    cursor: not-allowed;
   }
 
   td.available {
     background: rgb(172, 224, 172);
+    cursor: pointer;
   }
 }
