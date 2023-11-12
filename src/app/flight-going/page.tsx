@@ -1,26 +1,17 @@
-import { getFlightsFromTo } from '../fake-data/flights';
-import ScheduleMatrix from '../ui/schedule-matrix/schedule-matrix'
+'use client';
 
-export default async function Page() {
-  const weekStart = '';
-  const weekEnd = '';
-  const flights = await getFlightsFromTo(weekStart, weekEnd);
-  let flightTable = [];
-  
-  if (flights) {
-    flightTable = flights.origins.map((airport) => {
-      return (
-        <>
-          <h4>{airport.name}</h4>
-          <ScheduleMatrix dates={airport.dates} />
-        </>
-      );
-    });
-  }
+import { useCallback } from "react";
+import { WeekSelector } from "../ui/week-selector/week-selector";
+
+export default function Page() {
+
+  const weekSelected = useCallback((week) => {
+    console.log(week.start, week.end)
+  }, [])
 
   return (
     <div className="stepPage">
-      {flightTable}
+      <WeekSelector refDate={new Date()} onWeekSelected={weekSelected} />
     </div>
   )
 }

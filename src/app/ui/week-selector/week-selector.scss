@@ -1,0 +1,31 @@
+.WeekSelector {
+  button.previous,
+  button.next {
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  button.previous {
+    float: left;
+  }
+
+  p {
+    float: left;
+    padding-top: 3px;
+    text-align: center;
+    width: calc(100% - 48px);
+    overflow: hidden;
+
+    span {
+      padding: 0 0.7em;
+    }
+  }
+
+  button.next {
+    float: right;
+  }
+}
