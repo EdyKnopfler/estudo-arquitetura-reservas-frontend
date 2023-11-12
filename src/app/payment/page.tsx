@@ -1,3 +1,7 @@
 export default function Page() {
-  return <p>payment</p>
+  return (
+    <div className="stepPage">
+      payment
+    </div>
+  )
 }

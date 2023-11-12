@@ -1,3 +1,7 @@
 export default function Page() {
-  return <p>flight returning</p>
+  return (
+    <div className="stepPage">
+      flight returning
+    </div>
+  )
 }

@@ -1,3 +1,7 @@
 export default function Page() {
-  return <p>hotel</p>
+  return (
+    <div className="stepPage">
+      hotel
+    </div>
+  )
 }
