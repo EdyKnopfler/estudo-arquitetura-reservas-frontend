@@ -1,16 +1,3 @@
-export interface ScheduleDate {
-  date: string;
-  hours: string[];
-}
-
-export interface ScheduleOption {
-  name: string;
-  dates: ScheduleDate[];
-}
-
-export type FetchScheduleFunction =
-  (startDate: Date, endDate: Date) => Promise<ScheduleOption[]>;
-
 export interface ScheduleMatrixData {
   uniqueDates: string[];
   uniqueHours: string[];
@@ -20,3 +7,5 @@ export interface ScheduleMatrixData {
     }
   }
 }
+
+export type OptionSelected = (date: string, hour: string) => void
