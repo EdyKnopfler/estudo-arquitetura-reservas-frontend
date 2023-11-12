@@ -9,7 +9,7 @@ export interface ScheduleOption {
 }
 
 export type FetchScheduleFunction =
-  (startDate: string, endDate: string) => ScheduleOption[];
+  (startDate: Date, endDate: Date) => Promise<ScheduleOption[]>;
 
 export interface ScheduleMatrixData {
   uniqueDates: string[];

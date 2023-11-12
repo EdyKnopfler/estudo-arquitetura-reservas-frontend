@@ -1,8 +1,8 @@
 import { ScheduleOption } from "../ui/schedule-matrix/types";
 
 export async function getFlightsFromTo(
-  startDate: string, 
-  endDate: string
+  startDate: Date, 
+  endDate: Date
 ): Promise<ScheduleOption[]> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
