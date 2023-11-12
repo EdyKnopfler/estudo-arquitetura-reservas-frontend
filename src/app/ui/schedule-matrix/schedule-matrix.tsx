@@ -1,9 +1,11 @@
 import mountScheduleMatrixFrom from "./matrix-mount";
 
 import './schedule-matrix.scss';
+import { ScheduleDate } from "./types";
 
-export default function ScheduleMatrix({ dates }) {
+export default function ScheduleMatrix({ dates }: { dates: ScheduleDate[] }) {
   const matrix = mountScheduleMatrixFrom(dates);
+  console.log('matrix', matrix)
 
   return (
     <div className="ScheduleMatrix">

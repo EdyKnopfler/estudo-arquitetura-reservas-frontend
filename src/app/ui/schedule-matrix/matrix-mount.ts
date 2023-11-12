@@ -1,4 +1,8 @@
-export default function mountScheduleMatrixFrom(dates) {
+import { ScheduleDate, ScheduleMatrixData } from "./types";
+
+export default function mountScheduleMatrixFrom(
+  dates: ScheduleDate[]
+): ScheduleMatrixData {
   const uniqueDates = Object.keys(
     dates.reduce(
       (partial, date) => ({...partial, [date.date]: true}),
