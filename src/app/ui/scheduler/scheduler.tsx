@@ -1,11 +1,12 @@
 'use client';
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { WeekSelector } from "../week-selector/week-selector";
 import { Week } from "../week-selector/types";
 import ScheduleMatrix from "../schedule-matrix/schedule-matrix";
 import { ScheduleOption, StepSelection } from "@/app/fake-data/types";
 import { FetchScheduleFunction } from "./types";
+import { weekOf } from "../week-selector/functions";
 
 export default function Scheduler({
   currentSelection,
@@ -22,7 +23,13 @@ export default function Scheduler({
     setSchedule(newSchedule)
   }, [fetchSchedule]);
 
+  useEffect(() => {
+    // TODO carrega o schedule baseado na currentSelection
+    weekSelected(weekOf(new Date()))
+  }, [weekSelected])
+
   const optionSelected = useCallback((selection: StepSelection) => {
+    // TODO envia para o servidor
     setSelection(selection)
   }, [])
 
