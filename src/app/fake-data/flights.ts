@@ -1,13 +1,16 @@
-import { ScheduleOption } from "../ui/schedule-matrix/types";
+import { ScheduleOption } from "./types";
 
 export async function getFlightsFromTo(
   startDate: Date, 
   endDate: Date
 ): Promise<ScheduleOption[]> {
+  'use server';
+
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([
         {
+          optionId: 1111,
           name: 'Aeroporto de Congonhas (São Paulo)',
           dates: [
             {
@@ -21,6 +24,7 @@ export async function getFlightsFromTo(
           ]
         },
         {
+          optionId: 2222,
           name: 'Galeão (Rio de Janeiro)',
           dates: [
             {
