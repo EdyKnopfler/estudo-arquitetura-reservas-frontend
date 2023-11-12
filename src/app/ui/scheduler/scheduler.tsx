@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { WeekSelector } from "../week-selector/week-selector";
 import { Week } from "../week-selector/types";
 import ScheduleMatrix from "../schedule-matrix/schedule-matrix";
