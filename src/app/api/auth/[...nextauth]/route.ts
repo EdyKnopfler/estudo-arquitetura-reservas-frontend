@@ -1,6 +1,7 @@
 import { NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 import Credentials from "next-auth/providers/credentials";
+import { revalidatePath } from "next/cache";
 import { autenticarNoBackend } from "./auth-service";
 
 const nextAuthOptions: NextAuthOptions = {
@@ -15,6 +16,8 @@ const nextAuthOptions: NextAuthOptions = {
 
       async authorize(credentials) {
         console.log('logando com', {...credentials, password: '******' })
+
+        revalidatePath('/', 'layout')
 
         return await autenticarNoBackend(
           credentials!.email, credentials!.password)
