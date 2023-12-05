@@ -32,7 +32,7 @@ export async function autenticarNoBackend(
         conteudo.token, process.env.NEXTAUTH_SECRET!)
       console.log('obtemos', payload)
       return {
-        id: payload.id,
+        id: '1', // TODO geração do UUID no server
         name: payload.nome,
         email: payload.email,
         token: conteudo.token,
