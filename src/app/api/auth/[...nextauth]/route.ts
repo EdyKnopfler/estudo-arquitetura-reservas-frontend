@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
+import { revalidatePath } from "next/cache"
 
 const nextAuthOptions: NextAuthOptions = {
   providers: [
@@ -28,6 +29,7 @@ const nextAuthOptions: NextAuthOptions = {
         const user = await response.json()
         */
 
+        revalidatePath('/', 'layout')
         console.log('autorizando...')
         const user = { id: '1', name: 'Kânia', email: 'kania@gato.com' }
 

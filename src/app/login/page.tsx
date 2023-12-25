@@ -12,7 +12,6 @@ export default function Login() {
   const [senha, setSenha] = useState<string>('')
   const [loginResult, setLoginResult] = useState<string>('')
   const router = useRouter()
-  //const searchParams = useSearchParams()
 
   const doLogin = useCallback(async (event: SyntheticEvent) => {
     event.preventDefault()
@@ -32,13 +31,13 @@ export default function Login() {
         return
       }
 
-      router.replace(/* searchParams.get('callbackUrl') || */ '/flight-going')
+      router.replace('/flight-going')
       setLoginResult('')
     } catch (error) {
       console.error(error)
       setLoginResult('error')
     }
-  }, [email, senha, router /*, searchParams*/])
+  }, [ email, senha, router ])
 
   return (
     <div className="Login">
