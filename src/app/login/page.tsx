@@ -9,17 +9,17 @@ import { signIn } from "next-auth/react";
 
 export default function Login() {
   const [email, setEmail] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
-  const [loginResult, setLoginResult] = useState('')
+  const [senha, setSenha] = useState<string>('')
+  const [loginResult, setLoginResult] = useState<string>('')
   const router = useRouter()
-  const searchParams = useSearchParams()
+  //const searchParams = useSearchParams()
 
   const doLogin = useCallback(async (event: SyntheticEvent) => {
     event.preventDefault()
 
     try {
       const retorno = await signIn(
-        'credentials', { email, password, redirect: false })
+        'credentials', { email, senha, redirect: false })
 
       if (retorno?.error) {
         if (retorno.error === INVALID_CREDENTIALS) {
@@ -32,13 +32,13 @@ export default function Login() {
         return
       }
 
-      router.replace(searchParams.get('callbackUrl') || '/flight-going')
+      router.replace(/* searchParams.get('callbackUrl') || */ '/checkout/flight-going')
       setLoginResult('')
     } catch (error) {
       console.error(error)
       setLoginResult('error')
     }
-  }, [email, password, router, searchParams])
+  }, [email, senha, router /*, searchParams*/])
 
   return (
     <div className="Login">
@@ -60,7 +60,7 @@ export default function Login() {
         <label>
           <span>Senha</span>
           <input type="password" name="senha"
-            onChange={(e) => setPassword(e.target.value)} />
+            onChange={(e) => setSenha(e.target.value)} />
         </label>
         <div className="buttonsDiv">
           <button type="submit">Entrar</button>

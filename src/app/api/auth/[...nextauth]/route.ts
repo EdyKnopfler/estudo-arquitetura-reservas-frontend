@@ -28,9 +28,11 @@ const nextAuthOptions: NextAuthConfig = {
         const user = await response.json()
         */
 
+        console.log('autorizando...')
         const user = { id: '1', name: 'Kânia', email: 'kania@gato.com' }
 
         return user /* && response.ok */ ? user : null
+        //return null
       },
     }),
   ],

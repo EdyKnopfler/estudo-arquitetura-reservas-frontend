@@ -1,11 +1,10 @@
+'use server';
 import { ScheduleOption } from "./types";
 
 export async function getFlightsFromTo(
   startDate: Date, 
   endDate: Date
 ): Promise<ScheduleOption[]> {
-  'use server';
-
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([
