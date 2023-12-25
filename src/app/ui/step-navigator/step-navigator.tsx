@@ -4,10 +4,10 @@ import Link from 'next/link';
 import './step-navigator.scss';
 import { usePathname } from 'next/navigation';
 
-const FLIGHT_GOING = '/flight-going'
-const FLIGHT_RETURNING = '/flight-returning'
-const HOTEL = '/hotel'
-const PAYMENT = '/payment'
+const FLIGHT_GOING = '/checkout/flight-going'
+const FLIGHT_RETURNING = '/checkout/flight-returning'
+const HOTEL = '/checkout/hotel'
+const PAYMENT = '/checkout/payment'
 
 export default function StepNavigator() {
   const step: string = usePathname()
