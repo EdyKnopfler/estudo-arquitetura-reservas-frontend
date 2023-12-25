@@ -32,7 +32,7 @@ export default function Login() {
         return
       }
 
-      router.replace(/* searchParams.get('callbackUrl') || */ '/checkout/flight-going')
+      router.replace(/* searchParams.get('callbackUrl') || */ '/flight-going')
       setLoginResult('')
     } catch (error) {
       console.error(error)
